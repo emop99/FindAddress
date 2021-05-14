@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FindAddress</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <button type="button" onclick="ZipScript.searchZipBtn();" style="cursor: pointer;">
+            우편번호 찾기
+        </button>
+        <p>우편번호 : <input type="text" id="addrNum" readonly onclick="ZipScript.searchZipBtn();"></p>
+    </div>
+    <div>
+        <p>주소 1 : <input type="text" id="addr1" readonly onclick="ZipScript.searchZipBtn();"></p>
+    </div>
+    <div>
+        <p>주소 2 : <input type="text" id="addr2"></p>
+    </div>
+
+    <script src="ZipScript.js"></script>
+    <script>
+        $(function () {
+            ZipScript.init($('#addrNum'), $('#addr1'), $('#addr2'));
+        });
+    </script>
+</body>
+</html>
